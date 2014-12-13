@@ -8,7 +8,7 @@ makeCacheMatrix<- function(x=matrix()){ #input x will be a matrix
   get<-function(){x} #returns value of original matrix
   setmatrix<-function(inverse) {m<<-inverse}
   getmatrix<-function(){m} #return the cahced value to cachematrix()
-  list(get=get, setmatrix=setmatrix, getmatrix=getmatrix) #list of internal functions so function knows how to access methods
+  list(set=set, get=get, setmatrix=setmatrix, getmatrix=getmatrix) #list of internal functions so function knows how to access methods
 }
 
 cacheSolve<- function(x,...) { #input x ias an oject created by makeCacheMatrix
